@@ -11,14 +11,14 @@ Feature: File upload
     Given a limited company is applying to be secure
     When the user uploads a PDF file
     And the user clicks upload
-    Then A confirmation screen is displayed
+    Then the following confirmation screen is displayed
 
   @compatible
   Scenario Outline: Successfully upload multiple attachments - All supported mime types
     Given a limited company is applying to be secure
     When the user uploads a <mime_type> file
     And the user clicks upload
-    Then A confirmation screen is displayed
+    Then the following confirmation screen is displayed
 
     Examples:
       | mime_type          |
@@ -34,6 +34,6 @@ Feature: File upload
   @atonce
   Scenario: Successfully upload multiple attachments at once - All supported mime types
     Given a limited company is applying to be secure
-    When I upload multiple files
-    And I click upload
-    Then A confirmation screen is displayed
+    When the user uploads multiple files
+    And the user clicks upload
+    Then the following confirmation screen is displayed

@@ -33,7 +33,7 @@ public class FileUploadDomain extends BaseDomain {
         return this;
     }
 
-    public FileUploadDomain checkSuccessMessage() throws InterruptedException {
+    public FileUploadDomain checkConfirmationMessage() throws InterruptedException {
         fileUploadPage.checkSuccessMessage();
         return this;
     }

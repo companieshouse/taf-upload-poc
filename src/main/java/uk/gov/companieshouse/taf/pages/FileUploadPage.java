@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import uk.gov.ch.taf.common.verify.Verify;
 import uk.gov.companieshouse.taf.pages.BaseObject;
 
@@ -67,6 +68,7 @@ public class FileUploadPage extends BaseObject {
         } catch (NoSuchElementException ex) {
             Assert.fail("Page not displayed");
         }
+        Verify.isTrue(continueButton2(webDriver).isEnabled() == false);
         Thread.sleep(5000);
         return this;
     }
@@ -83,6 +85,7 @@ public class FileUploadPage extends BaseObject {
         } catch (NoSuchElementException ex) {
             Assert.fail("Page not displayed");
         }
+        Verify.isTrue(continueButton2(webDriver).isEnabled() == false);
         Thread.sleep(5000);
         return this;
     }
@@ -99,6 +102,7 @@ public class FileUploadPage extends BaseObject {
         } catch (NoSuchElementException ex) {
             Assert.fail("Page not displayed");
         }
+        Verify.isTrue(continueButton2(webDriver).isEnabled() == false);
         Thread.sleep(5000);
         return this;
     }

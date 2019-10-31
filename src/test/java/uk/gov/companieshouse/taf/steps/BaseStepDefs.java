@@ -16,14 +16,6 @@ public class BaseStepDefs implements Memory {
     @Inject
     public Memory memory;
 
-    /**
-     * Open given url.
-     */
-    public void goToSignInScreen() {
-        fileUploadDomain.navigateToWebPage();
-    }
-
-
     @Override
     public <T> Memory commit(TypedKey<T> typedKey, T type) {
         return memory.commit(typedKey, type);

@@ -85,25 +85,6 @@ public class BaseObject<T> {
         return (T) this;
     }
 
-    @SuppressWarnings("unchecked")
-    public T clickBrowserBack() {
-        Browser.back();
-        return (T) this;
-    }
-
-
-    protected boolean isReadOnly(PageElement element) {
-        return element.getAttribute("readonly").equalsIgnoreCase("true");
-    }
-
-    protected boolean isChecked(PageElement element) {
-        return element.isSelected();
-    }
-
-    protected boolean exists(PageElement element) {
-        return element != null;
-    }
-
     private String fileLocationGenerate(String filename) {
         try {
             String fileLocation = new File(getClass()
